@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💝</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+button {
+  padding: 12px 22px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+#no {
+  background: #eee;
+  margin-left: 10px;
+}
+#msg {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff4d6d;
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/audio/2022/10/03/audio_2b1e1a9d70.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+  <h2>💖</h2>
+  <p><b>Nissiluuuuuu</b>, will you be my Valentine? 💝</p>
+  <br>
+  <button id="yes" onclick="yesClick()">Yes 💕</button>
+  <button id="no" onmouseover="moveNo()">No 🙈</button>
+  <p id="msg"></p>
+</div>
+
+<script>
+function yesClick() {
+  document.getElementById("msg").innerHTML =
+  "I knew it 😌💖<br>You would go for the YES, my Valentine 💝😉";
+}
+function moveNo() {
+  const btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 70 + "%";
+  btn.style.top = Math.random() * 70 + "%";
+}
+</script>
+
+</body>
+</html>
